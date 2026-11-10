@@ -1,0 +1,58 @@
+@startuml
+!include _style.iuml
+title Diagrama de secuencia - Detección de fallos y recuperación
+hide footbox
+
+box "Coordinador" #FBFCFE
+participant "Monitor de\nheartbeats" as HB
+participant "Coordinador\n<<mediator>>" as Coord
+participant "WorkerProxy w2" as P2
+participant "Circuit Breaker\nw3" as CB
+participant "WorkerProxy w3" as P3
+participant "WorkerProxy w1" as P1
+participant "EventBus" as Bus
+end box
+participant "Nodo w2" as W2
+participant "Nodo w3\n(degradado)" as W3
+participant "Nodo w1" as W1
+
+== Caso A: caída abrupta o cuelgue del nodo w2 ==
+alt el proceso muere (kill)
+  W2 -x Coord : la conexión TCP de control se cierra
+  Coord -> Coord : _fail_worker(w2)\n<b>detección ≈ 1-6 ms</b>
+else el nodo se cuelga (sin heartbeats)
+  W2 -[#red]x HB : (no llegan HEARTBEAT)
+  loop cada 0,25 s
+    HB -> HB : ahora - último_latido > 3 s ?
+  end
+  HB -> Coord : _fail_worker(w2)\n<b>detección ≈ 2,9 s</b>
+end
+Coord -> P2 : state = DOWN; cerrar conexión de datos
+Coord -> Coord : re-encolar tareas en vuelo de w2\n(al frente de la cola)
+Coord ->> Bus : worker.down, task.requeued x N
+Coord -> P1 : send(tareas re-encoladas)
+P1 ->> W1 : EXECUTE
+W1 -->> P1 : RESULT ok
+note over Coord : Resultado tardío de w2 (si revive) se descarta\ncomo duplicado: semántica "al menos una vez" en\nejecución y "exactamente una vez" en el registro.
+
+== Caso B: nodo vivo pero degradado (Circuit Breaker) ==
+P3 ->> W3 : EXECUTE (lote)
+W3 -->> P3 : RESULT error x 3
+P3 -> CB : record_failure() x 3
+CB -> CB : CLOSED -> OPEN
+CB ->> Bus : breaker.opened(w3)
+Coord -> Coord : reintentar tareas fallidas\n(máx. 3 intentos)
+Coord -> P1 : send(reintentos)
+... reset_timeout = 2 s ...
+CB -> CB : OPEN -> HALF_OPEN
+Coord -> P3 : 1 tarea de prueba
+P3 ->> W3 : EXECUTE {1 tarea}
+alt la prueba falla
+  W3 -->> P3 : RESULT error
+  CB -> CB : HALF_OPEN -> OPEN
+else la prueba tiene éxito
+  W3 -->> P3 : RESULT ok
+  CB -> CB : HALF_OPEN -> CLOSED
+  CB ->> Bus : breaker.closed(w3)
+end
+@enduml

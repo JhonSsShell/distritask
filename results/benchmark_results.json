@@ -1,0 +1,4480 @@
+{
+  "environment": {
+    "date": "2026-11-10T10:41:08",
+    "python": "3.13.18",
+    "os": "Linux 6.18.44-fc-v338",
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "logical_cpus": 2,
+    "reps": 5
+  },
+  "E1": {
+    "title": "Escalabilidad vertical (hilos por nodo)",
+    "params": "1 nodo, 120 tareas de logs (500 lineas, 50 ms de E/S simulada)",
+    "rows": [
+      {
+        "threads": 1,
+        "label": "1 nodo x 1 hilos",
+        "runs": [
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 6.3877,
+            "throughput_tps": 18.79,
+            "latency_p50_ms": 3220.7,
+            "latency_p95_ms": 6072.7,
+            "latency_p99_ms": 6324.7,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 6.4722,
+            "throughput_tps": 18.54,
+            "latency_p50_ms": 3269.4,
+            "latency_p95_ms": 6153.1,
+            "latency_p99_ms": 6409.5,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 6.3767,
+            "throughput_tps": 18.82,
+            "latency_p50_ms": 3220.4,
+            "latency_p95_ms": 6057.5,
+            "latency_p99_ms": 6312.2,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 18.79,
+        "makespan_s": 6.388,
+        "latency_p50_ms": 3220.7,
+        "latency_p95_ms": 6072.7,
+        "done": 120,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 120,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 18.54,
+        "throughput_max": 18.82,
+        "per_worker": {
+          "w1": 120
+        },
+        "tasks": 120
+      },
+      {
+        "threads": 2,
+        "label": "1 nodo x 2 hilos",
+        "runs": [
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 3.2992,
+            "throughput_tps": 36.37,
+            "latency_p50_ms": 1695.0,
+            "latency_p95_ms": 3140.4,
+            "latency_p99_ms": 3287.2,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 3.2611,
+            "throughput_tps": 36.8,
+            "latency_p50_ms": 1672.3,
+            "latency_p95_ms": 3105.1,
+            "latency_p99_ms": 3248.2,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 3.2725,
+            "throughput_tps": 36.67,
+            "latency_p50_ms": 1669.7,
+            "latency_p95_ms": 3112.7,
+            "latency_p99_ms": 3259.5,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 36.67,
+        "makespan_s": 3.272,
+        "latency_p50_ms": 1672.3,
+        "latency_p95_ms": 3112.7,
+        "done": 120,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 120,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 36.37,
+        "throughput_max": 36.8,
+        "per_worker": {
+          "w1": 120
+        },
+        "tasks": 120
+      },
+      {
+        "threads": 4,
+        "label": "1 nodo x 4 hilos",
+        "runs": [
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 1.6888,
+            "throughput_tps": 71.06,
+            "latency_p50_ms": 876.6,
+            "latency_p95_ms": 1627.3,
+            "latency_p99_ms": 1682.9,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 1.6975,
+            "throughput_tps": 70.69,
+            "latency_p50_ms": 872.8,
+            "latency_p95_ms": 1596.9,
+            "latency_p99_ms": 1682.1,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 1.6596,
+            "throughput_tps": 72.3,
+            "latency_p50_ms": 870.4,
+            "latency_p95_ms": 1589.5,
+            "latency_p99_ms": 1647.7,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 71.06,
+        "makespan_s": 1.689,
+        "latency_p50_ms": 872.8,
+        "latency_p95_ms": 1596.9,
+        "done": 120,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 120,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 70.69,
+        "throughput_max": 72.3,
+        "per_worker": {
+          "w1": 120
+        },
+        "tasks": 120
+      },
+      {
+        "threads": 8,
+        "label": "1 nodo x 8 hilos",
+        "runs": [
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 0.8574,
+            "throughput_tps": 139.96,
+            "latency_p50_ms": 458.5,
+            "latency_p95_ms": 818.8,
+            "latency_p99_ms": 848.3,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 0.8768,
+            "throughput_tps": 136.86,
+            "latency_p50_ms": 469.5,
+            "latency_p95_ms": 841.8,
+            "latency_p99_ms": 876.7,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 0.8864,
+            "throughput_tps": 135.37,
+            "latency_p50_ms": 461.8,
+            "latency_p95_ms": 841.0,
+            "latency_p99_ms": 879.9,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 136.86,
+        "makespan_s": 0.877,
+        "latency_p50_ms": 461.8,
+        "latency_p95_ms": 841.0,
+        "done": 120,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 120,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 135.37,
+        "throughput_max": 139.96,
+        "per_worker": {
+          "w1": 120
+        },
+        "tasks": 120
+      },
+      {
+        "threads": 16,
+        "label": "1 nodo x 16 hilos",
+        "runs": [
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 0.7006,
+            "throughput_tps": 171.28,
+            "latency_p50_ms": 399.8,
+            "latency_p95_ms": 700.2,
+            "latency_p99_ms": 700.6,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 0.6378,
+            "throughput_tps": 188.16,
+            "latency_p50_ms": 396.7,
+            "latency_p95_ms": 621.8,
+            "latency_p99_ms": 637.7,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 120,
+            "done": 120,
+            "failed": 0,
+            "makespan_s": 0.7142,
+            "throughput_tps": 168.02,
+            "latency_p50_ms": 397.3,
+            "latency_p95_ms": 713.8,
+            "latency_p99_ms": 714.1,
+            "attempts": 120,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 171.28,
+        "makespan_s": 0.701,
+        "latency_p50_ms": 397.3,
+        "latency_p95_ms": 700.2,
+        "done": 120,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 120,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 168.02,
+        "throughput_max": 188.16,
+        "per_worker": {
+          "w1": 120
+        },
+        "tasks": 120
+      }
+    ],
+    "elapsed_s": 43.1
+  },
+  "E2": {
+    "title": "Escalabilidad horizontal (numero de nodos)",
+    "params": "N nodos x 4 hilos, 320 tareas de logs (500 lineas, 50 ms de E/S)",
+    "rows": [
+      {
+        "nodes": 1,
+        "label": "1 nodos x 4 hilos",
+        "runs": [
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 4.3712,
+            "throughput_tps": 73.21,
+            "latency_p50_ms": 2223.7,
+            "latency_p95_ms": 4147.4,
+            "latency_p99_ms": 4319.8,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 320
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 4.4411,
+            "throughput_tps": 72.05,
+            "latency_p50_ms": 2245.2,
+            "latency_p95_ms": 4223.3,
+            "latency_p99_ms": 4387.5,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 320
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 4.336,
+            "throughput_tps": 73.8,
+            "latency_p50_ms": 2204.7,
+            "latency_p95_ms": 4122.8,
+            "latency_p99_ms": 4285.0,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 320
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 73.21,
+        "makespan_s": 4.371,
+        "latency_p50_ms": 2223.7,
+        "latency_p95_ms": 4147.4,
+        "done": 320,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 320,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 72.05,
+        "throughput_max": 73.8,
+        "per_worker": {
+          "w1": 320
+        },
+        "tasks": 320,
+        "speedup": 1.0,
+        "efficiency_pct": 100.0
+      },
+      {
+        "nodes": 2,
+        "label": "2 nodos x 4 hilos",
+        "runs": [
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 2.2247,
+            "throughput_tps": 143.84,
+            "latency_p50_ms": 1116.7,
+            "latency_p95_ms": 2105.2,
+            "latency_p99_ms": 2172.3,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 160,
+              "w2": 160
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 2.2071,
+            "throughput_tps": 144.98,
+            "latency_p50_ms": 1153.8,
+            "latency_p95_ms": 2101.9,
+            "latency_p99_ms": 2179.2,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 161,
+              "w2": 159
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 2.2365,
+            "throughput_tps": 143.08,
+            "latency_p50_ms": 1125.9,
+            "latency_p95_ms": 2127.5,
+            "latency_p99_ms": 2216.8,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 159,
+              "w2": 161
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 143.84,
+        "makespan_s": 2.225,
+        "latency_p50_ms": 1125.9,
+        "latency_p95_ms": 2105.2,
+        "done": 320,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 320,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 143.08,
+        "throughput_max": 144.98,
+        "per_worker": {
+          "w1": 159,
+          "w2": 161
+        },
+        "tasks": 320,
+        "speedup": 1.96,
+        "efficiency_pct": 98.0
+      },
+      {
+        "nodes": 3,
+        "label": "3 nodos x 4 hilos",
+        "runs": [
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 1.5125,
+            "throughput_tps": 211.57,
+            "latency_p50_ms": 776.0,
+            "latency_p95_ms": 1433.0,
+            "latency_p99_ms": 1493.5,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 107,
+              "w2": 107,
+              "w3": 106
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 1.515,
+            "throughput_tps": 211.22,
+            "latency_p50_ms": 797.6,
+            "latency_p95_ms": 1448.5,
+            "latency_p99_ms": 1506.3,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 107,
+              "w2": 108,
+              "w3": 105
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 1.556,
+            "throughput_tps": 205.66,
+            "latency_p50_ms": 818.8,
+            "latency_p95_ms": 1488.1,
+            "latency_p99_ms": 1548.2,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 107,
+              "w2": 106,
+              "w3": 107
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 211.22,
+        "makespan_s": 1.515,
+        "latency_p50_ms": 797.6,
+        "latency_p95_ms": 1448.5,
+        "done": 320,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 320,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 205.66,
+        "throughput_max": 211.57,
+        "per_worker": {
+          "w1": 107,
+          "w2": 106,
+          "w3": 107
+        },
+        "tasks": 320,
+        "speedup": 2.89,
+        "efficiency_pct": 96.3
+      },
+      {
+        "nodes": 4,
+        "label": "4 nodos x 4 hilos",
+        "runs": [
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 1.1941,
+            "throughput_tps": 267.98,
+            "latency_p50_ms": 644.0,
+            "latency_p95_ms": 1140.5,
+            "latency_p99_ms": 1187.2,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 80,
+              "w2": 80,
+              "w3": 80,
+              "w4": 80
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 1.1449,
+            "throughput_tps": 279.5,
+            "latency_p50_ms": 599.3,
+            "latency_p95_ms": 1086.8,
+            "latency_p99_ms": 1129.2,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 82,
+              "w2": 80,
+              "w3": 77,
+              "w4": 81
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 1.1558,
+            "throughput_tps": 276.86,
+            "latency_p50_ms": 607.7,
+            "latency_p95_ms": 1103.2,
+            "latency_p99_ms": 1150.0,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 79,
+              "w2": 82,
+              "w3": 81,
+              "w4": 78
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 276.86,
+        "makespan_s": 1.156,
+        "latency_p50_ms": 607.7,
+        "latency_p95_ms": 1103.2,
+        "done": 320,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 320,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 267.98,
+        "throughput_max": 279.5,
+        "per_worker": {
+          "w1": 79,
+          "w2": 82,
+          "w3": 81,
+          "w4": 78
+        },
+        "tasks": 320,
+        "speedup": 3.78,
+        "efficiency_pct": 94.5
+      },
+      {
+        "nodes": 6,
+        "label": "6 nodos x 4 hilos",
+        "runs": [
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 0.8495,
+            "throughput_tps": 376.71,
+            "latency_p50_ms": 479.0,
+            "latency_p95_ms": 815.5,
+            "latency_p99_ms": 844.2,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 55,
+              "w2": 57,
+              "w3": 52,
+              "w4": 49,
+              "w5": 53,
+              "w6": 54
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 0.8193,
+            "throughput_tps": 390.57,
+            "latency_p50_ms": 439.5,
+            "latency_p95_ms": 795.8,
+            "latency_p99_ms": 817.2,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 51,
+              "w2": 53,
+              "w3": 55,
+              "w4": 54,
+              "w5": 54,
+              "w6": 53
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 0.8666,
+            "throughput_tps": 369.25,
+            "latency_p50_ms": 473.2,
+            "latency_p95_ms": 816.6,
+            "latency_p99_ms": 861.1,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 57,
+              "w2": 53,
+              "w3": 54,
+              "w4": 52,
+              "w5": 52,
+              "w6": 52
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 376.71,
+        "makespan_s": 0.85,
+        "latency_p50_ms": 473.2,
+        "latency_p95_ms": 815.5,
+        "done": 320,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 320,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 369.25,
+        "throughput_max": 390.57,
+        "per_worker": {
+          "w1": 57,
+          "w2": 53,
+          "w3": 54,
+          "w4": 52,
+          "w5": 52,
+          "w6": 52
+        },
+        "tasks": 320,
+        "speedup": 5.15,
+        "efficiency_pct": 85.8
+      },
+      {
+        "nodes": 8,
+        "label": "8 nodos x 4 hilos",
+        "runs": [
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 0.7765,
+            "throughput_tps": 412.09,
+            "latency_p50_ms": 425.2,
+            "latency_p95_ms": 725.9,
+            "latency_p99_ms": 752.2,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 38,
+              "w2": 42,
+              "w3": 37,
+              "w4": 42,
+              "w5": 40,
+              "w6": 43,
+              "w7": 42,
+              "w8": 36
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 0.7116,
+            "throughput_tps": 449.72,
+            "latency_p50_ms": 403.9,
+            "latency_p95_ms": 677.1,
+            "latency_p99_ms": 708.6,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 41,
+              "w2": 42,
+              "w3": 40,
+              "w4": 40,
+              "w5": 43,
+              "w6": 40,
+              "w7": 36,
+              "w8": 38
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 320,
+            "done": 320,
+            "failed": 0,
+            "makespan_s": 0.7192,
+            "throughput_tps": 444.95,
+            "latency_p50_ms": 418.1,
+            "latency_p95_ms": 681.9,
+            "latency_p99_ms": 705.9,
+            "attempts": 320,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 40,
+              "w2": 43,
+              "w3": 37,
+              "w4": 39,
+              "w5": 39,
+              "w6": 40,
+              "w7": 40,
+              "w8": 42
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 444.95,
+        "makespan_s": 0.719,
+        "latency_p50_ms": 418.1,
+        "latency_p95_ms": 681.9,
+        "done": 320,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 320,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 412.09,
+        "throughput_max": 449.72,
+        "per_worker": {
+          "w1": 40,
+          "w2": 43,
+          "w3": 37,
+          "w4": 39,
+          "w5": 39,
+          "w6": 40,
+          "w7": 40,
+          "w8": 42
+        },
+        "tasks": 320,
+        "speedup": 6.08,
+        "efficiency_pct": 76.0
+      }
+    ],
+    "elapsed_s": 38.9
+  },
+  "E3": {
+    "title": "Carga CPU pura y GIL",
+    "params": "24 tareas Monte Carlo de 1.000.000 de muestras",
+    "rows": [
+      {
+        "mode": "hilos (1 nodo)",
+        "n": 1,
+        "label": "1 nodo x 1 hilos (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.8216,
+            "throughput_tps": 13.17,
+            "latency_p50_ms": 973.1,
+            "latency_p95_ms": 1737.2,
+            "latency_p99_ms": 1805.0,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.8632,
+            "throughput_tps": 12.88,
+            "latency_p50_ms": 996.3,
+            "latency_p95_ms": 1771.3,
+            "latency_p99_ms": 1844.5,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.9213,
+            "throughput_tps": 12.49,
+            "latency_p50_ms": 986.7,
+            "latency_p95_ms": 1824.6,
+            "latency_p99_ms": 1901.8,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 12.88,
+        "makespan_s": 1.863,
+        "latency_p50_ms": 986.7,
+        "latency_p95_ms": 1771.3,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 12.49,
+        "throughput_max": 13.17,
+        "per_worker": {
+          "w1": 24
+        },
+        "tasks": 24
+      },
+      {
+        "mode": "hilos (1 nodo)",
+        "n": 2,
+        "label": "1 nodo x 2 hilos (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 2.0086,
+            "throughput_tps": 11.95,
+            "latency_p50_ms": 1123.3,
+            "latency_p95_ms": 1974.7,
+            "latency_p99_ms": 2005.6,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.9842,
+            "throughput_tps": 12.1,
+            "latency_p50_ms": 1086.4,
+            "latency_p95_ms": 1946.2,
+            "latency_p99_ms": 1979.4,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 2.0322,
+            "throughput_tps": 11.81,
+            "latency_p50_ms": 1103.5,
+            "latency_p95_ms": 1987.4,
+            "latency_p99_ms": 2026.1,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 11.95,
+        "makespan_s": 2.009,
+        "latency_p50_ms": 1103.5,
+        "latency_p95_ms": 1974.7,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 11.81,
+        "throughput_max": 12.1,
+        "per_worker": {
+          "w1": 24
+        },
+        "tasks": 24
+      },
+      {
+        "mode": "hilos (1 nodo)",
+        "n": 4,
+        "label": "1 nodo x 4 hilos (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 2.0244,
+            "throughput_tps": 11.86,
+            "latency_p50_ms": 1212.9,
+            "latency_p95_ms": 1982.9,
+            "latency_p99_ms": 2017.1,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 2.0287,
+            "throughput_tps": 11.83,
+            "latency_p50_ms": 1256.0,
+            "latency_p95_ms": 1995.0,
+            "latency_p99_ms": 2021.5,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 2.0607,
+            "throughput_tps": 11.65,
+            "latency_p50_ms": 1204.1,
+            "latency_p95_ms": 2045.6,
+            "latency_p99_ms": 2058.8,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 11.83,
+        "makespan_s": 2.029,
+        "latency_p50_ms": 1212.9,
+        "latency_p95_ms": 1995.0,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 11.65,
+        "throughput_max": 11.86,
+        "per_worker": {
+          "w1": 24
+        },
+        "tasks": 24
+      },
+      {
+        "mode": "procesos (1 nodo)",
+        "n": 1,
+        "label": "1 nodo x 1 procesos (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.9481,
+            "throughput_tps": 12.32,
+            "latency_p50_ms": 1063.0,
+            "latency_p95_ms": 1855.2,
+            "latency_p99_ms": 1929.6,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.875,
+            "throughput_tps": 12.8,
+            "latency_p50_ms": 985.1,
+            "latency_p95_ms": 1782.0,
+            "latency_p99_ms": 1856.7,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.983,
+            "throughput_tps": 12.1,
+            "latency_p50_ms": 1065.3,
+            "latency_p95_ms": 1891.2,
+            "latency_p99_ms": 1964.6,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 12.32,
+        "makespan_s": 1.948,
+        "latency_p50_ms": 1063.0,
+        "latency_p95_ms": 1855.2,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 12.1,
+        "throughput_max": 12.8,
+        "per_worker": {
+          "w1": 24
+        },
+        "tasks": 24
+      },
+      {
+        "mode": "procesos (1 nodo)",
+        "n": 2,
+        "label": "1 nodo x 2 procesos (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.0143,
+            "throughput_tps": 23.66,
+            "latency_p50_ms": 538.5,
+            "latency_p95_ms": 974.1,
+            "latency_p99_ms": 1006.6,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.9784,
+            "throughput_tps": 24.53,
+            "latency_p50_ms": 523.7,
+            "latency_p95_ms": 966.2,
+            "latency_p99_ms": 978.4,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.1598,
+            "throughput_tps": 20.69,
+            "latency_p50_ms": 545.7,
+            "latency_p95_ms": 1097.2,
+            "latency_p99_ms": 1146.3,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 23.66,
+        "makespan_s": 1.014,
+        "latency_p50_ms": 538.5,
+        "latency_p95_ms": 974.1,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 20.69,
+        "throughput_max": 24.53,
+        "per_worker": {
+          "w1": 24
+        },
+        "tasks": 24
+      },
+      {
+        "mode": "procesos (1 nodo)",
+        "n": 4,
+        "label": "1 nodo x 4 procesos (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.9638,
+            "throughput_tps": 24.9,
+            "latency_p50_ms": 557.5,
+            "latency_p95_ms": 955.2,
+            "latency_p99_ms": 962.8,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.958,
+            "throughput_tps": 25.05,
+            "latency_p50_ms": 550.3,
+            "latency_p95_ms": 945.6,
+            "latency_p99_ms": 955.2,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.9881,
+            "throughput_tps": 24.29,
+            "latency_p50_ms": 599.7,
+            "latency_p95_ms": 975.5,
+            "latency_p99_ms": 985.5,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 24.9,
+        "makespan_s": 0.964,
+        "latency_p50_ms": 557.5,
+        "latency_p95_ms": 955.2,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 24.29,
+        "throughput_max": 25.05,
+        "per_worker": {
+          "w1": 24
+        },
+        "tasks": 24
+      },
+      {
+        "mode": "nodos x 1 hilo",
+        "n": 1,
+        "label": "1 nodos x 1 hilo (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.9146,
+            "throughput_tps": 12.54,
+            "latency_p50_ms": 1018.8,
+            "latency_p95_ms": 1835.0,
+            "latency_p99_ms": 1898.7,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.8986,
+            "throughput_tps": 12.64,
+            "latency_p50_ms": 994.1,
+            "latency_p95_ms": 1802.8,
+            "latency_p99_ms": 1879.4,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.8628,
+            "throughput_tps": 12.88,
+            "latency_p50_ms": 1001.7,
+            "latency_p95_ms": 1777.4,
+            "latency_p99_ms": 1845.4,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 24
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 12.64,
+        "makespan_s": 1.899,
+        "latency_p50_ms": 1001.7,
+        "latency_p95_ms": 1802.8,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 12.54,
+        "throughput_max": 12.88,
+        "per_worker": {
+          "w1": 24
+        },
+        "tasks": 24
+      },
+      {
+        "mode": "nodos x 1 hilo",
+        "n": 2,
+        "label": "2 nodos x 1 hilo (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.9878,
+            "throughput_tps": 24.3,
+            "latency_p50_ms": 524.2,
+            "latency_p95_ms": 924.2,
+            "latency_p99_ms": 973.6,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 12,
+              "w2": 12
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 1.0276,
+            "throughput_tps": 23.36,
+            "latency_p50_ms": 545.0,
+            "latency_p95_ms": 966.0,
+            "latency_p99_ms": 1014.1,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 13,
+              "w2": 11
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.9552,
+            "throughput_tps": 25.13,
+            "latency_p50_ms": 534.9,
+            "latency_p95_ms": 937.9,
+            "latency_p99_ms": 953.5,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 13,
+              "w2": 11
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 24.3,
+        "makespan_s": 0.988,
+        "latency_p50_ms": 534.9,
+        "latency_p95_ms": 937.9,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 23.36,
+        "throughput_max": 25.13,
+        "per_worker": {
+          "w1": 13,
+          "w2": 11
+        },
+        "tasks": 24
+      },
+      {
+        "mode": "nodos x 1 hilo",
+        "n": 4,
+        "label": "4 nodos x 1 hilo (pi)",
+        "runs": [
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.9259,
+            "throughput_tps": 25.92,
+            "latency_p50_ms": 576.5,
+            "latency_p95_ms": 885.9,
+            "latency_p99_ms": 917.2,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 6,
+              "w2": 6,
+              "w3": 6,
+              "w4": 6
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.9466,
+            "throughput_tps": 25.36,
+            "latency_p50_ms": 569.5,
+            "latency_p95_ms": 915.1,
+            "latency_p99_ms": 939.4,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 6,
+              "w2": 6,
+              "w3": 6,
+              "w4": 6
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 24,
+            "done": 24,
+            "failed": 0,
+            "makespan_s": 0.9208,
+            "throughput_tps": 26.06,
+            "latency_p50_ms": 537.2,
+            "latency_p95_ms": 917.1,
+            "latency_p99_ms": 920.8,
+            "attempts": 24,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 6,
+              "w2": 6,
+              "w3": 6,
+              "w4": 6
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 25.92,
+        "makespan_s": 0.926,
+        "latency_p50_ms": 569.5,
+        "latency_p95_ms": 915.1,
+        "done": 24,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 24,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 25.36,
+        "throughput_max": 26.06,
+        "per_worker": {
+          "w1": 6,
+          "w2": 6,
+          "w3": 6,
+          "w4": 6
+        },
+        "tasks": 24
+      }
+    ],
+    "elapsed_s": 48.7
+  },
+  "E4": {
+    "title": "Version 1 vs. version 2 (ablacion)",
+    "params": "3 nodos x 4 hilos",
+    "rows": [
+      {
+        "scenario": "Homogeneo (3 nodos iguales)",
+        "config": "V1 linea base",
+        "label": "Homogeneo (3 nodos | V1 linea base",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.6992,
+            "throughput_tps": 211.86,
+            "latency_p50_ms": 866.6,
+            "latency_p95_ms": 1617.1,
+            "latency_p99_ms": 1676.1,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120,
+              "w2": 118,
+              "w3": 122
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.6754,
+            "throughput_tps": 214.87,
+            "latency_p50_ms": 853.0,
+            "latency_p95_ms": 1577.1,
+            "latency_p99_ms": 1641.5,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120,
+              "w2": 120,
+              "w3": 120
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.6991,
+            "throughput_tps": 211.88,
+            "latency_p50_ms": 902.4,
+            "latency_p95_ms": 1632.6,
+            "latency_p99_ms": 1690.1,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120,
+              "w2": 122,
+              "w3": 118
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 211.88,
+        "makespan_s": 1.699,
+        "latency_p50_ms": 866.6,
+        "latency_p95_ms": 1617.1,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 211.86,
+        "throughput_max": 214.87,
+        "per_worker": {
+          "w1": 120,
+          "w2": 122,
+          "w3": 118
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Homogeneo (3 nodos iguales)",
+        "config": "+ conexion persistente",
+        "label": "Homogeneo (3 nodos | + conexion persistente",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.7078,
+            "throughput_tps": 210.8,
+            "latency_p50_ms": 897.4,
+            "latency_p95_ms": 1622.3,
+            "latency_p99_ms": 1689.0,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 121,
+              "w2": 118,
+              "w3": 121
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.6624,
+            "throughput_tps": 216.55,
+            "latency_p50_ms": 861.7,
+            "latency_p95_ms": 1580.7,
+            "latency_p99_ms": 1647.8,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 121,
+              "w2": 120,
+              "w3": 119
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.6795,
+            "throughput_tps": 214.35,
+            "latency_p50_ms": 869.2,
+            "latency_p95_ms": 1592.4,
+            "latency_p99_ms": 1656.6,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 119,
+              "w2": 121,
+              "w3": 120
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 214.35,
+        "makespan_s": 1.679,
+        "latency_p50_ms": 869.2,
+        "latency_p95_ms": 1592.4,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 210.8,
+        "throughput_max": 216.55,
+        "per_worker": {
+          "w1": 119,
+          "w2": 121,
+          "w3": 120
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Homogeneo (3 nodos iguales)",
+        "config": "+ lotes (8)",
+        "label": "Homogeneo (3 nodos | + lotes (8)",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.6747,
+            "throughput_tps": 214.96,
+            "latency_p50_ms": 854.7,
+            "latency_p95_ms": 1585.2,
+            "latency_p99_ms": 1649.3,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120,
+              "w2": 121,
+              "w3": 119
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.6934,
+            "throughput_tps": 212.6,
+            "latency_p50_ms": 872.3,
+            "latency_p95_ms": 1613.3,
+            "latency_p99_ms": 1674.4,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 122,
+              "w2": 119,
+              "w3": 119
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.6791,
+            "throughput_tps": 214.39,
+            "latency_p50_ms": 886.9,
+            "latency_p95_ms": 1610.8,
+            "latency_p99_ms": 1672.9,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 120,
+              "w2": 122,
+              "w3": 118
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 214.39,
+        "makespan_s": 1.679,
+        "latency_p50_ms": 872.3,
+        "latency_p95_ms": 1610.8,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 212.6,
+        "throughput_max": 214.96,
+        "per_worker": {
+          "w1": 120,
+          "w2": 122,
+          "w3": 118
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Homogeneo (3 nodos iguales)",
+        "config": "V2 (+ least-loaded, creditos=2)",
+        "label": "Homogeneo (3 nodos | V2 (+ least-loaded, creditos=2)",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.7137,
+            "throughput_tps": 210.07,
+            "latency_p50_ms": 900.6,
+            "latency_p95_ms": 1643.2,
+            "latency_p99_ms": 1703.4,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 124,
+              "w2": 117,
+              "w3": 119
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.7044,
+            "throughput_tps": 211.21,
+            "latency_p50_ms": 881.8,
+            "latency_p95_ms": 1618.8,
+            "latency_p99_ms": 1694.3,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 119,
+              "w2": 119,
+              "w3": 122
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 1.699,
+            "throughput_tps": 211.88,
+            "latency_p50_ms": 883.1,
+            "latency_p95_ms": 1625.3,
+            "latency_p99_ms": 1690.4,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 117,
+              "w2": 122,
+              "w3": 121
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 211.21,
+        "makespan_s": 1.704,
+        "latency_p50_ms": 883.1,
+        "latency_p95_ms": 1625.3,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 210.07,
+        "throughput_max": 211.88,
+        "per_worker": {
+          "w1": 117,
+          "w2": 122,
+          "w3": 121
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Heterogeneo (w3 4x mas lento)",
+        "config": "V1 linea base",
+        "label": "Heterogeneo (w3 4x | V1 linea base",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2703,
+            "throughput_tps": 110.08,
+            "latency_p50_ms": 1133.1,
+            "latency_p95_ms": 2389.9,
+            "latency_p99_ms": 3114.9,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 150,
+              "w2": 150,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.297,
+            "throughput_tps": 109.19,
+            "latency_p50_ms": 1128.6,
+            "latency_p95_ms": 2396.8,
+            "latency_p99_ms": 3127.7,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 150,
+              "w2": 150,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2992,
+            "throughput_tps": 109.12,
+            "latency_p50_ms": 1163.8,
+            "latency_p95_ms": 2368.4,
+            "latency_p99_ms": 3139.4,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 152,
+              "w2": 148,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 109.19,
+        "makespan_s": 3.297,
+        "latency_p50_ms": 1133.1,
+        "latency_p95_ms": 2389.9,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 109.12,
+        "throughput_max": 110.08,
+        "per_worker": {
+          "w1": 152,
+          "w2": 148,
+          "w3": 60
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Heterogeneo (w3 4x mas lento)",
+        "config": "+ conexion persistente",
+        "label": "Heterogeneo (w3 4x | + conexion persistente",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2525,
+            "throughput_tps": 110.68,
+            "latency_p50_ms": 1121.8,
+            "latency_p95_ms": 2383.6,
+            "latency_p99_ms": 3115.2,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 150,
+              "w2": 150,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.295,
+            "throughput_tps": 109.26,
+            "latency_p50_ms": 1164.1,
+            "latency_p95_ms": 2374.1,
+            "latency_p99_ms": 3135.5,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 151,
+              "w2": 149,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2476,
+            "throughput_tps": 110.85,
+            "latency_p50_ms": 1122.8,
+            "latency_p95_ms": 2382.0,
+            "latency_p99_ms": 3110.3,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 148,
+              "w2": 152,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 110.68,
+        "makespan_s": 3.252,
+        "latency_p50_ms": 1122.8,
+        "latency_p95_ms": 2382.0,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 109.26,
+        "throughput_max": 110.85,
+        "per_worker": {
+          "w1": 148,
+          "w2": 152,
+          "w3": 60
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Heterogeneo (w3 4x mas lento)",
+        "config": "+ lotes (8)",
+        "label": "Heterogeneo (w3 4x | + lotes (8)",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2222,
+            "throughput_tps": 111.72,
+            "latency_p50_ms": 1142.2,
+            "latency_p95_ms": 2356.2,
+            "latency_p99_ms": 3090.2,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 152,
+              "w2": 148,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.3154,
+            "throughput_tps": 108.59,
+            "latency_p50_ms": 1165.7,
+            "latency_p95_ms": 2445.8,
+            "latency_p99_ms": 3173.6,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 150,
+              "w2": 150,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2695,
+            "throughput_tps": 110.11,
+            "latency_p50_ms": 1141.3,
+            "latency_p95_ms": 2370.8,
+            "latency_p99_ms": 3113.5,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 150,
+              "w2": 150,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 110.11,
+        "makespan_s": 3.269,
+        "latency_p50_ms": 1142.2,
+        "latency_p95_ms": 2370.8,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 108.59,
+        "throughput_max": 111.72,
+        "per_worker": {
+          "w1": 150,
+          "w2": 150,
+          "w3": 60
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Heterogeneo (w3 4x mas lento)",
+        "config": "V2 (+ least-loaded, creditos=2)",
+        "label": "Heterogeneo (w3 4x | V2 (+ least-loaded, creditos=2)",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4186,
+            "throughput_tps": 148.85,
+            "latency_p50_ms": 1132.4,
+            "latency_p95_ms": 2095.7,
+            "latency_p99_ms": 2270.9,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 158,
+              "w2": 158,
+              "w3": 44
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.3803,
+            "throughput_tps": 151.24,
+            "latency_p50_ms": 1161.0,
+            "latency_p95_ms": 2134.0,
+            "latency_p99_ms": 2266.6,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 160,
+              "w2": 156,
+              "w3": 44
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4283,
+            "throughput_tps": 148.25,
+            "latency_p50_ms": 1137.1,
+            "latency_p95_ms": 2099.5,
+            "latency_p99_ms": 2279.6,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 158,
+              "w2": 158,
+              "w3": 44
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 148.85,
+        "makespan_s": 2.419,
+        "latency_p50_ms": 1137.1,
+        "latency_p95_ms": 2099.5,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 148.25,
+        "throughput_max": 151.24,
+        "per_worker": {
+          "w1": 158,
+          "w2": 158,
+          "w3": 44
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Tareas finas (2000 x ~0.5 ms)",
+        "config": "V1 linea base",
+        "label": "Tareas finas (2000 | V1 linea base",
+        "runs": [
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 1.2298,
+            "throughput_tps": 1626.32,
+            "latency_p50_ms": 589.1,
+            "latency_p95_ms": 1175.3,
+            "latency_p99_ms": 1220.0,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 667,
+              "w2": 667,
+              "w3": 666
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 1.1907,
+            "throughput_tps": 1679.63,
+            "latency_p50_ms": 595.4,
+            "latency_p95_ms": 1131.9,
+            "latency_p99_ms": 1180.0,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 667,
+              "w2": 667,
+              "w3": 666
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 1.3172,
+            "throughput_tps": 1518.36,
+            "latency_p50_ms": 673.8,
+            "latency_p95_ms": 1235.2,
+            "latency_p99_ms": 1297.6,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 667,
+              "w2": 667,
+              "w3": 666
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 1626.32,
+        "makespan_s": 1.23,
+        "latency_p50_ms": 595.4,
+        "latency_p95_ms": 1175.3,
+        "done": 2000,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 2000,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 1518.36,
+        "throughput_max": 1679.63,
+        "per_worker": {
+          "w1": 667,
+          "w2": 667,
+          "w3": 666
+        },
+        "tasks": 2000
+      },
+      {
+        "scenario": "Tareas finas (2000 x ~0.5 ms)",
+        "config": "+ conexion persistente",
+        "label": "Tareas finas (2000 | + conexion persistente",
+        "runs": [
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.3978,
+            "throughput_tps": 5028.09,
+            "latency_p50_ms": 216.0,
+            "latency_p95_ms": 386.8,
+            "latency_p99_ms": 395.8,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 555,
+              "w2": 782,
+              "w3": 663
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4097,
+            "throughput_tps": 4881.15,
+            "latency_p50_ms": 228.4,
+            "latency_p95_ms": 389.7,
+            "latency_p99_ms": 405.2,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 938,
+              "w2": 541,
+              "w3": 521
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4183,
+            "throughput_tps": 4780.92,
+            "latency_p50_ms": 216.9,
+            "latency_p95_ms": 397.7,
+            "latency_p99_ms": 412.2,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 777,
+              "w2": 510,
+              "w3": 713
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 4881.15,
+        "makespan_s": 0.41,
+        "latency_p50_ms": 216.9,
+        "latency_p95_ms": 389.7,
+        "done": 2000,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 2000,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 4780.92,
+        "throughput_max": 5028.09,
+        "per_worker": {
+          "w1": 777,
+          "w2": 510,
+          "w3": 713
+        },
+        "tasks": 2000
+      },
+      {
+        "scenario": "Tareas finas (2000 x ~0.5 ms)",
+        "config": "+ lotes (8)",
+        "label": "Tareas finas (2000 | + lotes (8)",
+        "runs": [
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4171,
+            "throughput_tps": 4794.99,
+            "latency_p50_ms": 210.9,
+            "latency_p95_ms": 394.0,
+            "latency_p99_ms": 411.8,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 593,
+              "w2": 915,
+              "w3": 492
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4501,
+            "throughput_tps": 4443.82,
+            "latency_p50_ms": 265.0,
+            "latency_p95_ms": 434.4,
+            "latency_p99_ms": 444.7,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 585,
+              "w2": 868,
+              "w3": 547
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4317,
+            "throughput_tps": 4632.67,
+            "latency_p50_ms": 235.6,
+            "latency_p95_ms": 412.2,
+            "latency_p99_ms": 425.8,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 694,
+              "w2": 735,
+              "w3": 571
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 4632.67,
+        "makespan_s": 0.432,
+        "latency_p50_ms": 235.6,
+        "latency_p95_ms": 412.2,
+        "done": 2000,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 2000,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 4443.82,
+        "throughput_max": 4794.99,
+        "per_worker": {
+          "w1": 694,
+          "w2": 735,
+          "w3": 571
+        },
+        "tasks": 2000
+      },
+      {
+        "scenario": "Tareas finas (2000 x ~0.5 ms)",
+        "config": "V2 (+ least-loaded, creditos=2)",
+        "label": "Tareas finas (2000 | V2 (+ least-loaded, creditos=2)",
+        "runs": [
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.5686,
+            "throughput_tps": 3517.18,
+            "latency_p50_ms": 282.0,
+            "latency_p95_ms": 549.9,
+            "latency_p99_ms": 566.4,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 632,
+              "w2": 561,
+              "w3": 807
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4732,
+            "throughput_tps": 4226.57,
+            "latency_p50_ms": 250.4,
+            "latency_p95_ms": 453.9,
+            "latency_p99_ms": 470.5,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 625,
+              "w2": 586,
+              "w3": 789
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4272,
+            "throughput_tps": 4681.42,
+            "latency_p50_ms": 231.8,
+            "latency_p95_ms": 409.3,
+            "latency_p99_ms": 425.6,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 779,
+              "w2": 638,
+              "w3": 583
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 4226.57,
+        "makespan_s": 0.473,
+        "latency_p50_ms": 250.4,
+        "latency_p95_ms": 453.9,
+        "done": 2000,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 2000,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 3517.18,
+        "throughput_max": 4681.42,
+        "per_worker": {
+          "w1": 779,
+          "w2": 638,
+          "w3": 583
+        },
+        "tasks": 2000
+      }
+    ],
+    "elapsed_s": 75.7
+  },
+  "E5": {
+    "title": "Tolerancia a fallos de nodo",
+    "params": "3 nodos x 4 hilos, 600 tareas, fallo inyectado en t = 1 s, timeout heartbeat 3 s",
+    "rows": [
+      {
+        "profile": "baseline",
+        "fault": "Sin fallos",
+        "label": "baseline | Sin fallos",
+        "runs": [
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 2.8002,
+            "throughput_tps": 214.27,
+            "latency_p50_ms": 1434.4,
+            "latency_p95_ms": 2654.7,
+            "latency_p99_ms": 2766.3,
+            "attempts": 600,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 202,
+              "w2": 200,
+              "w3": 198
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 2.8154,
+            "throughput_tps": 213.11,
+            "latency_p50_ms": 1444.0,
+            "latency_p95_ms": 2656.0,
+            "latency_p99_ms": 2766.3,
+            "attempts": 600,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 199,
+              "w2": 201,
+              "w3": 200
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 2.7421,
+            "throughput_tps": 218.81,
+            "latency_p50_ms": 1411.7,
+            "latency_p95_ms": 2616.9,
+            "latency_p99_ms": 2724.3,
+            "attempts": 600,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 200,
+              "w2": 199,
+              "w3": 201
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 214.27,
+        "makespan_s": 2.8,
+        "latency_p50_ms": 1434.4,
+        "latency_p95_ms": 2654.7,
+        "done": 600,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 600,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 213.11,
+        "throughput_max": 218.81,
+        "per_worker": {
+          "w1": 200,
+          "w2": 199,
+          "w3": 201
+        },
+        "tasks": 600
+      },
+      {
+        "profile": "baseline",
+        "fault": "Caida abrupta de w2 (kill)",
+        "label": "baseline | Caida abrupta de w2 (kill)",
+        "runs": [
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 3.6333,
+            "throughput_tps": 165.14,
+            "latency_p50_ms": 1622.4,
+            "latency_p95_ms": 3405.9,
+            "latency_p99_ms": 3574.9,
+            "attempts": 634,
+            "retries": 5,
+            "requeues": 29,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 265,
+              "w2": 69,
+              "w3": 266
+            },
+            "detection_s": 0.003,
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 3.678,
+            "throughput_tps": 163.13,
+            "latency_p50_ms": 1657.3,
+            "latency_p95_ms": 3467.6,
+            "latency_p99_ms": 3631.5,
+            "attempts": 636,
+            "retries": 31,
+            "requeues": 5,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 267,
+              "w2": 68,
+              "w3": 265
+            },
+            "detection_s": 0.006,
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 3.6448,
+            "throughput_tps": 164.62,
+            "latency_p50_ms": 1593.2,
+            "latency_p95_ms": 3431.3,
+            "latency_p99_ms": 3595.6,
+            "attempts": 632,
+            "retries": 2,
+            "requeues": 30,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 262,
+              "w2": 71,
+              "w3": 267
+            },
+            "detection_s": 0.002,
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 164.62,
+        "makespan_s": 3.645,
+        "latency_p50_ms": 1622.4,
+        "latency_p95_ms": 3431.3,
+        "done": 600,
+        "failed": 0,
+        "retries": 5,
+        "requeues": 29,
+        "attempts": 634,
+        "duplicates": 0,
+        "detection_s": 0.003,
+        "breaker_opens": 0,
+        "throughput_min": 163.13,
+        "throughput_max": 165.14,
+        "per_worker": {
+          "w1": 262,
+          "w2": 71,
+          "w3": 267
+        },
+        "tasks": 600
+      },
+      {
+        "profile": "baseline",
+        "fault": "Cuelgue de w2 (sin heartbeats)",
+        "label": "baseline | Cuelgue de w2 (sin heartbeats)",
+        "runs": [
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 4.1241,
+            "throughput_tps": 145.49,
+            "latency_p50_ms": 1609.7,
+            "latency_p95_ms": 3945.5,
+            "latency_p99_ms": 4110.0,
+            "attempts": 632,
+            "retries": 0,
+            "requeues": 32,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 263,
+              "w2": 71,
+              "w3": 266
+            },
+            "detection_s": 2.885,
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 4.1862,
+            "throughput_tps": 143.33,
+            "latency_p50_ms": 1632.5,
+            "latency_p95_ms": 3999.8,
+            "latency_p99_ms": 4164.0,
+            "attempts": 632,
+            "retries": 0,
+            "requeues": 32,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 266,
+              "w2": 69,
+              "w3": 265
+            },
+            "detection_s": 2.942,
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 4.1333,
+            "throughput_tps": 145.16,
+            "latency_p50_ms": 1634.5,
+            "latency_p95_ms": 3950.4,
+            "latency_p99_ms": 4119.7,
+            "attempts": 632,
+            "retries": 0,
+            "requeues": 32,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 265,
+              "w2": 67,
+              "w3": 268
+            },
+            "detection_s": 2.894,
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 145.16,
+        "makespan_s": 4.133,
+        "latency_p50_ms": 1632.5,
+        "latency_p95_ms": 3950.4,
+        "done": 600,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 32,
+        "attempts": 632,
+        "duplicates": 0,
+        "detection_s": 2.894,
+        "breaker_opens": 0,
+        "throughput_min": 143.33,
+        "throughput_max": 145.49,
+        "per_worker": {
+          "w1": 265,
+          "w2": 67,
+          "w3": 268
+        },
+        "tasks": 600
+      },
+      {
+        "profile": "optimized",
+        "fault": "Sin fallos",
+        "label": "optimized | Sin fallos",
+        "runs": [
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 2.8038,
+            "throughput_tps": 213.99,
+            "latency_p50_ms": 1429.8,
+            "latency_p95_ms": 2660.4,
+            "latency_p99_ms": 2764.8,
+            "attempts": 600,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 195,
+              "w2": 204,
+              "w3": 201
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 2.8015,
+            "throughput_tps": 214.17,
+            "latency_p50_ms": 1428.5,
+            "latency_p95_ms": 2661.6,
+            "latency_p99_ms": 2770.5,
+            "attempts": 600,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 199,
+              "w2": 202,
+              "w3": 199
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 2.7571,
+            "throughput_tps": 217.62,
+            "latency_p50_ms": 1427.2,
+            "latency_p95_ms": 2622.4,
+            "latency_p99_ms": 2729.7,
+            "attempts": 600,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 197,
+              "w2": 203,
+              "w3": 200
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 214.17,
+        "makespan_s": 2.801,
+        "latency_p50_ms": 1428.5,
+        "latency_p95_ms": 2660.4,
+        "done": 600,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 600,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 213.99,
+        "throughput_max": 217.62,
+        "per_worker": {
+          "w1": 197,
+          "w2": 203,
+          "w3": 200
+        },
+        "tasks": 600
+      },
+      {
+        "profile": "optimized",
+        "fault": "Caida abrupta de w2 (kill)",
+        "label": "optimized | Caida abrupta de w2 (kill)",
+        "runs": [
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 3.6636,
+            "throughput_tps": 163.78,
+            "latency_p50_ms": 1632.2,
+            "latency_p95_ms": 3452.8,
+            "latency_p99_ms": 3612.8,
+            "attempts": 608,
+            "retries": 0,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 265,
+              "w2": 69,
+              "w3": 266
+            },
+            "detection_s": 0.001,
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 3.6247,
+            "throughput_tps": 165.53,
+            "latency_p50_ms": 1621.3,
+            "latency_p95_ms": 3415.8,
+            "latency_p99_ms": 3582.4,
+            "attempts": 608,
+            "retries": 0,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 268,
+              "w2": 68,
+              "w3": 264
+            },
+            "detection_s": 0.001,
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 3.6272,
+            "throughput_tps": 165.42,
+            "latency_p50_ms": 1621.7,
+            "latency_p95_ms": 3418.8,
+            "latency_p99_ms": 3582.3,
+            "attempts": 608,
+            "retries": 0,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 268,
+              "w2": 68,
+              "w3": 264
+            },
+            "detection_s": 0.001,
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 165.42,
+        "makespan_s": 3.627,
+        "latency_p50_ms": 1621.7,
+        "latency_p95_ms": 3418.8,
+        "done": 600,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 8,
+        "attempts": 608,
+        "duplicates": 0,
+        "detection_s": 0.001,
+        "breaker_opens": 0,
+        "throughput_min": 163.78,
+        "throughput_max": 165.53,
+        "per_worker": {
+          "w1": 268,
+          "w2": 68,
+          "w3": 264
+        },
+        "tasks": 600
+      },
+      {
+        "profile": "optimized",
+        "fault": "Cuelgue de w2 (sin heartbeats)",
+        "label": "optimized | Cuelgue de w2 (sin heartbeats)",
+        "runs": [
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 4.0192,
+            "throughput_tps": 149.28,
+            "latency_p50_ms": 1586.3,
+            "latency_p95_ms": 3402.0,
+            "latency_p99_ms": 3955.0,
+            "attempts": 608,
+            "retries": 0,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 259,
+              "w2": 72,
+              "w3": 269
+            },
+            "detection_s": 2.897,
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 4.0546,
+            "throughput_tps": 147.98,
+            "latency_p50_ms": 1632.7,
+            "latency_p95_ms": 3441.8,
+            "latency_p99_ms": 3991.3,
+            "attempts": 608,
+            "retries": 0,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 265,
+              "w2": 69,
+              "w3": 266
+            },
+            "detection_s": 2.936,
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 600,
+            "done": 600,
+            "failed": 0,
+            "makespan_s": 4.0081,
+            "throughput_tps": 149.7,
+            "latency_p50_ms": 1645.3,
+            "latency_p95_ms": 3485.4,
+            "latency_p99_ms": 3943.1,
+            "attempts": 608,
+            "retries": 0,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 272,
+              "w2": 68,
+              "w3": 260
+            },
+            "detection_s": 2.888,
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 149.28,
+        "makespan_s": 4.019,
+        "latency_p50_ms": 1632.7,
+        "latency_p95_ms": 3441.8,
+        "done": 600,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 8,
+        "attempts": 608,
+        "duplicates": 0,
+        "detection_s": 2.897,
+        "breaker_opens": 0,
+        "throughput_min": 147.98,
+        "throughput_max": 149.7,
+        "per_worker": {
+          "w1": 272,
+          "w2": 68,
+          "w3": 260
+        },
+        "tasks": 600
+      }
+    ],
+    "elapsed_s": 72.4
+  },
+  "E6": {
+    "title": "Nodo degradado (w3 falla el 100 % de sus tareas)",
+    "params": "3 nodos x 4 hilos, 360 tareas, max. 3 intentos por tarea",
+    "rows": [
+      {
+        "config": "V1 (round-robin, sin protecciones)",
+        "label": "V1 (round-robin, sin protecciones)",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 129,
+            "failed": 231,
+            "makespan_s": 0.9203,
+            "throughput_tps": 140.17,
+            "latency_p50_ms": 499.5,
+            "latency_p95_ms": 883.9,
+            "latency_p99_ms": 916.9,
+            "attempts": 908,
+            "retries": 548,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 65,
+              "w2": 64
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 121,
+            "failed": 239,
+            "makespan_s": 0.8748,
+            "throughput_tps": 138.32,
+            "latency_p50_ms": 482.8,
+            "latency_p95_ms": 833.7,
+            "latency_p99_ms": 868.2,
+            "attempts": 908,
+            "retries": 548,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 61,
+              "w2": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 118,
+            "failed": 242,
+            "makespan_s": 0.8538,
+            "throughput_tps": 138.2,
+            "latency_p50_ms": 473.6,
+            "latency_p95_ms": 812.7,
+            "latency_p99_ms": 851.0,
+            "attempts": 931,
+            "retries": 571,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 60,
+              "w2": 58
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 138.32,
+        "makespan_s": 0.875,
+        "latency_p50_ms": 482.8,
+        "latency_p95_ms": 833.7,
+        "done": 121,
+        "failed": 239,
+        "retries": 548,
+        "requeues": 0,
+        "attempts": 908,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 138.2,
+        "throughput_max": 140.17,
+        "per_worker": {
+          "w1": 60,
+          "w2": 58
+        },
+        "tasks": 360
+      },
+      {
+        "config": "V2 sin breaker ni anti-afinidad",
+        "label": "V2 sin breaker ni anti-afinidad",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 24,
+            "failed": 336,
+            "makespan_s": 0.1884,
+            "throughput_tps": 127.41,
+            "latency_p50_ms": 127.8,
+            "latency_p95_ms": 187.2,
+            "latency_p99_ms": 188.1,
+            "attempts": 1032,
+            "retries": 672,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 12,
+              "w2": 12
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 24,
+            "failed": 336,
+            "makespan_s": 0.2036,
+            "throughput_tps": 117.9,
+            "latency_p50_ms": 134.1,
+            "latency_p95_ms": 203.5,
+            "latency_p99_ms": 203.5,
+            "attempts": 1032,
+            "retries": 672,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 12,
+              "w2": 12
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 24,
+            "failed": 336,
+            "makespan_s": 0.2026,
+            "throughput_tps": 118.49,
+            "latency_p50_ms": 135.0,
+            "latency_p95_ms": 202.0,
+            "latency_p99_ms": 202.5,
+            "attempts": 1032,
+            "retries": 672,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 12,
+              "w2": 12
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 118.49,
+        "makespan_s": 0.203,
+        "latency_p50_ms": 134.1,
+        "latency_p95_ms": 202.0,
+        "done": 24,
+        "failed": 336,
+        "retries": 672,
+        "requeues": 0,
+        "attempts": 1032,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 117.9,
+        "throughput_max": 127.41,
+        "per_worker": {
+          "w1": 12,
+          "w2": 12
+        },
+        "tasks": 360
+      },
+      {
+        "config": "V2 + anti-afinidad de reintentos",
+        "label": "V2 + anti-afinidad de reintentos",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4602,
+            "throughput_tps": 146.33,
+            "latency_p50_ms": 1251.7,
+            "latency_p95_ms": 2346.5,
+            "latency_p99_ms": 2435.3,
+            "attempts": 704,
+            "retries": 344,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 179,
+              "w2": 181
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4459,
+            "throughput_tps": 147.19,
+            "latency_p50_ms": 1268.4,
+            "latency_p95_ms": 2334.5,
+            "latency_p99_ms": 2436.3,
+            "attempts": 704,
+            "retries": 344,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 179,
+              "w2": 181
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.5111,
+            "throughput_tps": 143.37,
+            "latency_p50_ms": 1299.7,
+            "latency_p95_ms": 2395.1,
+            "latency_p99_ms": 2496.4,
+            "attempts": 704,
+            "retries": 344,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 182,
+              "w2": 178
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 146.33,
+        "makespan_s": 2.46,
+        "latency_p50_ms": 1268.4,
+        "latency_p95_ms": 2346.5,
+        "done": 360,
+        "failed": 0,
+        "retries": 344,
+        "requeues": 0,
+        "attempts": 704,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 143.37,
+        "throughput_max": 147.19,
+        "per_worker": {
+          "w1": 182,
+          "w2": 178
+        },
+        "tasks": 360
+      },
+      {
+        "config": "V2.1 + Circuit Breaker (final)",
+        "label": "V2.1 + Circuit Breaker (final)",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4668,
+            "throughput_tps": 145.94,
+            "latency_p50_ms": 1253.2,
+            "latency_p95_ms": 2348.7,
+            "latency_p99_ms": 2448.6,
+            "attempts": 371,
+            "retries": 11,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 179,
+              "w2": 181
+            },
+            "breaker_opens": 2
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4618,
+            "throughput_tps": 146.24,
+            "latency_p50_ms": 1262.2,
+            "latency_p95_ms": 2352.0,
+            "latency_p99_ms": 2443.6,
+            "attempts": 371,
+            "retries": 11,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 181,
+              "w2": 179
+            },
+            "breaker_opens": 2
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4463,
+            "throughput_tps": 147.16,
+            "latency_p50_ms": 1245.4,
+            "latency_p95_ms": 2333.2,
+            "latency_p99_ms": 2419.5,
+            "attempts": 371,
+            "retries": 11,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 180,
+              "w2": 180
+            },
+            "breaker_opens": 2
+          }
+        ],
+        "throughput_tps": 146.24,
+        "makespan_s": 2.462,
+        "latency_p50_ms": 1253.2,
+        "latency_p95_ms": 2348.7,
+        "done": 360,
+        "failed": 0,
+        "retries": 11,
+        "requeues": 0,
+        "attempts": 371,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 2,
+        "throughput_min": 145.94,
+        "throughput_max": 147.16,
+        "per_worker": {
+          "w1": 180,
+          "w2": 180
+        },
+        "tasks": 360
+      }
+    ],
+    "elapsed_s": 24.0
+  },
+  "E7": {
+    "title": "Sensibilidad a los creditos por hilo (prefetch)",
+    "params": "3 nodos x 4 hilos, least-loaded, conexion persistente, lotes de 8",
+    "rows": [
+      {
+        "scenario": "Heterogeneo (w3 4x mas lento)",
+        "prefetch": 1,
+        "label": "Heterogeneo (w3 4x | creditos=1",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4237,
+            "throughput_tps": 148.54,
+            "latency_p50_ms": 1228.8,
+            "latency_p95_ms": 2261.7,
+            "latency_p99_ms": 2362.1,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 155,
+              "w2": 161,
+              "w3": 44
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.5888,
+            "throughput_tps": 139.06,
+            "latency_p50_ms": 1257.1,
+            "latency_p95_ms": 2340.5,
+            "latency_p99_ms": 2417.3,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 159,
+              "w2": 155,
+              "w3": 46
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.584,
+            "throughput_tps": 139.32,
+            "latency_p50_ms": 1272.3,
+            "latency_p95_ms": 2321.4,
+            "latency_p99_ms": 2426.4,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 160,
+              "w2": 155,
+              "w3": 45
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 139.32,
+        "makespan_s": 2.584,
+        "latency_p50_ms": 1257.1,
+        "latency_p95_ms": 2321.4,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 139.06,
+        "throughput_max": 148.54,
+        "per_worker": {
+          "w1": 160,
+          "w2": 155,
+          "w3": 45
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Heterogeneo (w3 4x mas lento)",
+        "prefetch": 2,
+        "label": "Heterogeneo (w3 4x | creditos=2",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4204,
+            "throughput_tps": 148.74,
+            "latency_p50_ms": 1154.8,
+            "latency_p95_ms": 2123.9,
+            "latency_p99_ms": 2265.2,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 158,
+              "w2": 158,
+              "w3": 44
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4719,
+            "throughput_tps": 145.64,
+            "latency_p50_ms": 1136.2,
+            "latency_p95_ms": 2112.1,
+            "latency_p99_ms": 2293.0,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 158,
+              "w2": 158,
+              "w3": 44
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.4741,
+            "throughput_tps": 145.51,
+            "latency_p50_ms": 1154.1,
+            "latency_p95_ms": 2115.4,
+            "latency_p99_ms": 2313.7,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 160,
+              "w2": 156,
+              "w3": 44
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 145.64,
+        "makespan_s": 2.472,
+        "latency_p50_ms": 1154.1,
+        "latency_p95_ms": 2115.4,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 145.51,
+        "throughput_max": 148.74,
+        "per_worker": {
+          "w1": 160,
+          "w2": 156,
+          "w3": 44
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Heterogeneo (w3 4x mas lento)",
+        "prefetch": 4,
+        "label": "Heterogeneo (w3 4x | creditos=4",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.8062,
+            "throughput_tps": 128.29,
+            "latency_p50_ms": 1146.6,
+            "latency_p95_ms": 2159.7,
+            "latency_p99_ms": 2597.2,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 157,
+              "w2": 153,
+              "w3": 50
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.5949,
+            "throughput_tps": 138.73,
+            "latency_p50_ms": 1116.6,
+            "latency_p95_ms": 2082.0,
+            "latency_p99_ms": 2448.2,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 156,
+              "w2": 156,
+              "w3": 48
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 2.6232,
+            "throughput_tps": 137.24,
+            "latency_p50_ms": 1129.9,
+            "latency_p95_ms": 2103.9,
+            "latency_p99_ms": 2479.0,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 155,
+              "w2": 157,
+              "w3": 48
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 137.24,
+        "makespan_s": 2.623,
+        "latency_p50_ms": 1129.9,
+        "latency_p95_ms": 2103.9,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 128.29,
+        "throughput_max": 138.73,
+        "per_worker": {
+          "w1": 155,
+          "w2": 157,
+          "w3": 48
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Heterogeneo (w3 4x mas lento)",
+        "prefetch": 8,
+        "label": "Heterogeneo (w3 4x | creditos=8",
+        "runs": [
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2327,
+            "throughput_tps": 111.36,
+            "latency_p50_ms": 1142.9,
+            "latency_p95_ms": 2372.3,
+            "latency_p99_ms": 3095.1,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 150,
+              "w2": 150,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2583,
+            "throughput_tps": 110.49,
+            "latency_p50_ms": 1132.2,
+            "latency_p95_ms": 2360.0,
+            "latency_p99_ms": 3104.3,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 150,
+              "w2": 150,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 360,
+            "done": 360,
+            "failed": 0,
+            "makespan_s": 3.2304,
+            "throughput_tps": 111.44,
+            "latency_p50_ms": 1117.1,
+            "latency_p95_ms": 2343.9,
+            "latency_p99_ms": 3084.3,
+            "attempts": 360,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 148,
+              "w2": 152,
+              "w3": 60
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 111.36,
+        "makespan_s": 3.233,
+        "latency_p50_ms": 1132.2,
+        "latency_p95_ms": 2360.0,
+        "done": 360,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 360,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 110.49,
+        "throughput_max": 111.44,
+        "per_worker": {
+          "w1": 148,
+          "w2": 152,
+          "w3": 60
+        },
+        "tasks": 360
+      },
+      {
+        "scenario": "Tareas finas (2000 x ~0.5 ms)",
+        "prefetch": 1,
+        "label": "Tareas finas (2000 | creditos=1",
+        "runs": [
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.5495,
+            "throughput_tps": 3639.41,
+            "latency_p50_ms": 265.2,
+            "latency_p95_ms": 529.1,
+            "latency_p99_ms": 545.7,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 623,
+              "w2": 704,
+              "w3": 673
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.5722,
+            "throughput_tps": 3495.43,
+            "latency_p50_ms": 271.8,
+            "latency_p95_ms": 550.0,
+            "latency_p99_ms": 568.7,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 653,
+              "w2": 620,
+              "w3": 727
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4853,
+            "throughput_tps": 4120.99,
+            "latency_p50_ms": 239.9,
+            "latency_p95_ms": 464.1,
+            "latency_p99_ms": 481.6,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 667,
+              "w2": 646,
+              "w3": 687
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 3639.41,
+        "makespan_s": 0.549,
+        "latency_p50_ms": 265.2,
+        "latency_p95_ms": 529.1,
+        "done": 2000,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 2000,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 3495.43,
+        "throughput_max": 4120.99,
+        "per_worker": {
+          "w1": 667,
+          "w2": 646,
+          "w3": 687
+        },
+        "tasks": 2000
+      },
+      {
+        "scenario": "Tareas finas (2000 x ~0.5 ms)",
+        "prefetch": 2,
+        "label": "Tareas finas (2000 | creditos=2",
+        "runs": [
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4792,
+            "throughput_tps": 4173.55,
+            "latency_p50_ms": 269.6,
+            "latency_p95_ms": 459.8,
+            "latency_p99_ms": 476.3,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 657,
+              "w2": 648,
+              "w3": 695
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4782,
+            "throughput_tps": 4182.53,
+            "latency_p50_ms": 268.8,
+            "latency_p95_ms": 456.2,
+            "latency_p99_ms": 475.4,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 627,
+              "w2": 653,
+              "w3": 720
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4982,
+            "throughput_tps": 4014.76,
+            "latency_p50_ms": 287.9,
+            "latency_p95_ms": 479.9,
+            "latency_p99_ms": 494.1,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 745,
+              "w2": 555,
+              "w3": 700
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 4173.55,
+        "makespan_s": 0.479,
+        "latency_p50_ms": 269.6,
+        "latency_p95_ms": 459.8,
+        "done": 2000,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 2000,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 4014.76,
+        "throughput_max": 4182.53,
+        "per_worker": {
+          "w1": 745,
+          "w2": 555,
+          "w3": 700
+        },
+        "tasks": 2000
+      },
+      {
+        "scenario": "Tareas finas (2000 x ~0.5 ms)",
+        "prefetch": 4,
+        "label": "Tareas finas (2000 | creditos=4",
+        "runs": [
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4454,
+            "throughput_tps": 4490.07,
+            "latency_p50_ms": 208.4,
+            "latency_p95_ms": 428.0,
+            "latency_p99_ms": 440.0,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 842,
+              "w2": 573,
+              "w3": 585
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4559,
+            "throughput_tps": 4386.76,
+            "latency_p50_ms": 255.1,
+            "latency_p95_ms": 430.1,
+            "latency_p99_ms": 448.9,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 564,
+              "w2": 838,
+              "w3": 598
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4226,
+            "throughput_tps": 4732.1,
+            "latency_p50_ms": 222.0,
+            "latency_p95_ms": 405.9,
+            "latency_p99_ms": 419.4,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 584,
+              "w2": 646,
+              "w3": 770
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 4490.07,
+        "makespan_s": 0.445,
+        "latency_p50_ms": 222.0,
+        "latency_p95_ms": 428.0,
+        "done": 2000,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 2000,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 4386.76,
+        "throughput_max": 4732.1,
+        "per_worker": {
+          "w1": 584,
+          "w2": 646,
+          "w3": 770
+        },
+        "tasks": 2000
+      },
+      {
+        "scenario": "Tareas finas (2000 x ~0.5 ms)",
+        "prefetch": 8,
+        "label": "Tareas finas (2000 | creditos=8",
+        "runs": [
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4283,
+            "throughput_tps": 4669.83,
+            "latency_p50_ms": 227.1,
+            "latency_p95_ms": 409.4,
+            "latency_p99_ms": 424.2,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 592,
+              "w2": 843,
+              "w3": 565
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.467,
+            "throughput_tps": 4282.54,
+            "latency_p50_ms": 271.4,
+            "latency_p95_ms": 447.6,
+            "latency_p99_ms": 463.2,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 843,
+              "w2": 682,
+              "w3": 475
+            },
+            "breaker_opens": 0
+          },
+          {
+            "tasks": 2000,
+            "done": 2000,
+            "failed": 0,
+            "makespan_s": 0.4066,
+            "throughput_tps": 4919.2,
+            "latency_p50_ms": 201.8,
+            "latency_p95_ms": 387.9,
+            "latency_p99_ms": 402.6,
+            "attempts": 2000,
+            "retries": 0,
+            "requeues": 0,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 620,
+              "w2": 584,
+              "w3": 796
+            },
+            "breaker_opens": 0
+          }
+        ],
+        "throughput_tps": 4669.83,
+        "makespan_s": 0.428,
+        "latency_p50_ms": 227.1,
+        "latency_p95_ms": 409.4,
+        "done": 2000,
+        "failed": 0,
+        "retries": 0,
+        "requeues": 0,
+        "attempts": 2000,
+        "duplicates": 0,
+        "detection_s": null,
+        "breaker_opens": 0,
+        "throughput_min": 4282.54,
+        "throughput_max": 4919.2,
+        "per_worker": {
+          "w1": 620,
+          "w2": 584,
+          "w3": 796
+        },
+        "tasks": 2000
+      }
+    ],
+    "elapsed_s": 45.9
+  },
+  "E8": {
+    "title": "Fallos combinados en caliente (validacion del ajuste v2.1)",
+    "params": "4 nodos x 4 hilos, 1500 tareas; t=1 s cuelga w3; t=1,8 s w4 falla el 100 %",
+    "before_fix_failed_per_run": [
+      4,
+      0,
+      8,
+      3,
+      2
+    ],
+    "rows": [
+      {
+        "label": "V2.1 | w3 colgado + w4 degradado en caliente",
+        "runs": [
+          {
+            "tasks": 1500,
+            "done": 1500,
+            "failed": 0,
+            "makespan_s": 8.8219,
+            "throughput_tps": 170.03,
+            "latency_p50_ms": 3773.4,
+            "latency_p95_ms": 8305.7,
+            "latency_p99_ms": 8689.2,
+            "attempts": 1515,
+            "retries": 7,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 651,
+              "w2": 649,
+              "w3": 65,
+              "w4": 135
+            },
+            "detection_s": 2.919,
+            "breaker_opens": 4
+          },
+          {
+            "tasks": 1500,
+            "done": 1500,
+            "failed": 0,
+            "makespan_s": 8.7401,
+            "throughput_tps": 171.62,
+            "latency_p50_ms": 3726.0,
+            "latency_p95_ms": 8235.3,
+            "latency_p99_ms": 8632.7,
+            "attempts": 1519,
+            "retries": 11,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 647,
+              "w2": 649,
+              "w3": 69,
+              "w4": 135
+            },
+            "detection_s": 2.94,
+            "breaker_opens": 4
+          },
+          {
+            "tasks": 1500,
+            "done": 1500,
+            "failed": 0,
+            "makespan_s": 8.8141,
+            "throughput_tps": 170.18,
+            "latency_p50_ms": 3801.2,
+            "latency_p95_ms": 8312.3,
+            "latency_p99_ms": 8718.8,
+            "attempts": 1515,
+            "retries": 7,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 651,
+              "w2": 646,
+              "w3": 69,
+              "w4": 134
+            },
+            "detection_s": 2.942,
+            "breaker_opens": 4
+          },
+          {
+            "tasks": 1500,
+            "done": 1500,
+            "failed": 0,
+            "makespan_s": 8.8228,
+            "throughput_tps": 170.01,
+            "latency_p50_ms": 3827.2,
+            "latency_p95_ms": 8314.3,
+            "latency_p99_ms": 8720.5,
+            "attempts": 1515,
+            "retries": 7,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 651,
+              "w2": 651,
+              "w3": 64,
+              "w4": 134
+            },
+            "detection_s": 2.8,
+            "breaker_opens": 4
+          },
+          {
+            "tasks": 1500,
+            "done": 1500,
+            "failed": 0,
+            "makespan_s": 8.7823,
+            "throughput_tps": 170.8,
+            "latency_p50_ms": 3748.8,
+            "latency_p95_ms": 8292.6,
+            "latency_p99_ms": 8689.8,
+            "attempts": 1515,
+            "retries": 7,
+            "requeues": 8,
+            "duplicates": 0,
+            "per_worker": {
+              "w1": 649,
+              "w2": 649,
+              "w3": 69,
+              "w4": 133
+            },
+            "detection_s": 2.798,
+            "breaker_opens": 4
+          }
+        ],
+        "throughput_tps": 170.18,
+        "makespan_s": 8.814,
+        "latency_p50_ms": 3773.4,
+        "latency_p95_ms": 8305.7,
+        "done": 1500,
+        "failed": 0,
+        "retries": 7,
+        "requeues": 8,
+        "attempts": 1515,
+        "duplicates": 0,
+        "detection_s": 2.919,
+        "breaker_opens": 4,
+        "throughput_min": 170.01,
+        "throughput_max": 171.62,
+        "per_worker": {
+          "w1": 649,
+          "w2": 649,
+          "w3": 69,
+          "w4": 133
+        },
+        "tasks": 1500
+      }
+    ],
+    "elapsed_s": 46.8
+  }
+}

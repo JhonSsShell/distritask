@@ -1,0 +1,53 @@
+@startuml
+!include _style.iuml
+title Diagrama de despliegue - DistriTask en una red de nube (VPC / red de contenedores)
+
+node "Estación del analista\n<<device>>" as Client {
+  artifact "client.py" as aClient
+  node "Navegador web" as Browser
+}
+
+cloud "Red privada de la nube (VPC 10.0.0.0/16) / red Docker 'distritask'" as VPC {
+  node "VM / contenedor: coordinador\n<<execution environment>>\nPython 3.12 · 2 vCPU" as NCoord {
+    artifact "distritask.coordinator\n:5000/TCP" as aCoord
+  }
+  node "VM / contenedor: monitoreo\n<<execution environment>>" as NMon {
+    artifact "distritask.dashboard\n:8080/HTTP" as aDash
+  }
+  node "Grupo de autoescalado de nodos trabajadores (N réplicas)" as ASG {
+    node "Nodo w1\n<<execution environment>>\nPool de 4 hilos" as N1 {
+      artifact "distritask.worker\n:puerto dinámico" as aW1
+    }
+    node "Nodo w2\n<<execution environment>>\nPool de 4 hilos" as N2 {
+      artifact "distritask.worker" as aW2
+    }
+    node "Nodo wN\n<<execution environment>>\nPool de 4 hilos" as NN {
+      artifact "distritask.worker" as aWN
+    }
+  }
+  database "Almacenamiento de objetos\n(logs por chunk - simulado\ncon latencia de E/S)" as Store
+}
+
+aClient --> aCoord : TCP 5000\nSUBMIT_JOB / JOB_DONE\n(JSON con prefijo de longitud)
+Browser --> aDash : HTTP + Server-Sent Events\n:8080
+aDash --> aCoord : TCP 5000\nSUBSCRIBE / EVENT
+aW1 --> aCoord : TCP 5000 (control)\nREGISTER / HEARTBEAT 1 s
+aW2 --> aCoord : control
+aWN --> aCoord : control
+aCoord --> aW1 : TCP (datos) conexión persistente\nEXECUTE (lotes) / RESULT
+aCoord --> aW2 : datos
+aCoord --> aWN : datos
+aW1 ..> Store : GET chunk
+aW2 ..> Store
+aWN ..> Store
+
+note bottom of ASG
+  Escalado horizontal: añadir un nodo = lanzar otra réplica;
+  se registra sola y el despachador le asigna créditos.
+end note
+note right of NCoord
+  Punto único de coordinación
+  (mejora futura: réplica pasiva
+  + elección de líder)
+end note
+@enduml

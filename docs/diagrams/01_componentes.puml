@@ -1,0 +1,66 @@
+@startuml
+!include _style.iuml
+title Diagrama de componentes - DistriTask
+
+
+package "Cliente" {
+  [Aplicación cliente\n(CLI client.py)] as App
+  [CoordinatorClient\n<<proxy>>] as CClient
+}
+
+package "Coordinador (nodo maestro)" as CoordPkg {
+  [Aceptador de conexiones\n(hilo por conexión)] as Acceptor
+  [Gestor de trabajos\n(JobRecord / TaskRecord)] as Jobs
+  [Despachador\n<<productor-consumidor>>] as Dispatcher
+  [Estrategia de balanceo\n<<strategy>>] as Strategy
+  [WorkerProxy\n<<proxy remoto>>] as WProxy
+  [Circuit Breaker] as Breaker
+  [Monitor de heartbeats] as HB
+  [EventBus\n<<observer: sujeto>>] as Bus
+  [MetricsCollector\n<<observer>>] as Metrics
+  [Reductor (reduce)] as Reducer
+}
+
+package "Nodo trabajador (x N)" as WorkerPkg {
+  [Servidor de datos\n(plano de datos)] as DataSrv
+  [Agente de control\n(registro + heartbeat)] as Agent
+  [Pool de hilos / procesos\n<<thread pool>>] as Pool
+  [Manejadores de tareas\n(logs, pi)] as Handlers
+  [Inyector de caos] as Chaos
+}
+
+package "Observabilidad" {
+  [Monitor de consola] as Mon
+  [Dashboard web\n(SSE)] as Dash
+}
+
+interface "IJobSubmission\nSUBMIT_JOB / STATS" as IJob
+interface "IControl\nREGISTER / HEARTBEAT" as ICtl
+interface "IEventStream\nSUBSCRIBE / EVENT" as IEvt
+interface "IExecution\nEXECUTE / RESULT" as IExec
+interface "HTTP / SSE :8080" as IHttp
+
+App --> CClient
+CClient --> IJob
+IJob -- Acceptor
+ICtl -- Acceptor
+IEvt -- Acceptor
+Acceptor --> Jobs
+Jobs --> Dispatcher
+Dispatcher --> Strategy
+Dispatcher --> WProxy
+WProxy --> Breaker
+HB --> WProxy
+Jobs --> Reducer
+Jobs ..> Bus : publica
+Bus ..> Metrics : notifica
+WProxy --> IExec
+IExec -- DataSrv
+DataSrv --> Pool
+Pool --> Handlers
+DataSrv --> Chaos
+Agent --> ICtl
+Mon --> IEvt
+Dash --> IEvt
+Dash -- IHttp
+@enduml

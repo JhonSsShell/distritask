@@ -1,0 +1,96 @@
+# Hallazgo durante la evaluación: Circuit Breaker se cerraba prematuramente (versión 2.0)
+# Escenario: 4 nodos x 4 hilos, 1500 tareas; t=1 s cuelgue de w3; t=1,8 s w4 pasa a fallar el 100 %
+# Fallidas permanentes por corrida (5 corridas): 4, 0, 8, 3, 2
+
+## Corrida extra 1
+{'tasks': 1500, 'done': 1492, 'failed': 8, 'makespan_s': 8.7321, 'throughput_tps': 170.86, 'latency_p50_ms': 3738.9, 'latency_p95_ms': 8238.0, 'latency_p99_ms': 8640.2, 'attempts': 1536, 'retries': 28, 'requeues': 8, 'duplicates': 0, 'per_worker': {'w1': 644, 'w2': 643, 'w3': 67, 'w4': 138}}
+60.22 breaker.opened w4
+60.22 breaker.closed w4
+60.22 breaker.opened w4
+60.24 breaker.closed w4
+60.24 breaker.opened w4
+60.25 breaker.closed w4
+60.25 breaker.opened w4
+62.03 worker.down w3
+62.25 breaker.half_open w4
+62.25 breaker.opened w4
+64.25 breaker.half_open w4
+64.26 breaker.opened w4
+66.26 breaker.half_open w4
+66.26 breaker.opened w4
+c308495f-00484 [(60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.22, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00485 [(60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00488 [(60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.24, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00489 [(60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.22, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00495 [(60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.22, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.22, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00499 [(60.24, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.24, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.25, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00500 [(60.24, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.24, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.25, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00501 [(60.24, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.25, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00502 [(60.24, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.25, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.25, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+c308495f-00503 [(60.24, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (60.25, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+
+## Corrida extra 2
+{'tasks': 1500, 'done': 1497, 'failed': 3, 'makespan_s': 8.6746, 'throughput_tps': 172.57, 'latency_p50_ms': 3718.9, 'latency_p95_ms': 8183.8, 'latency_p99_ms': 8574.1, 'attempts': 1531, 'retries': 23, 'requeues': 8, 'duplicates': 0, 'per_worker': {'w1': 642, 'w2': 649, 'w3': 69, 'w4': 137}}
+69.58 breaker.opened w4
+69.58 breaker.closed w4
+69.59 breaker.opened w4
+69.6 breaker.closed w4
+69.6 breaker.opened w4
+71.51 worker.down w3
+71.6 breaker.half_open w4
+71.6 breaker.opened w4
+73.61 breaker.half_open w4
+73.61 breaker.opened w4
+75.62 breaker.half_open w4
+75.62 breaker.opened w4
+76.39 worker.down w2
+76.39 worker.down w1
+a4778985-00489 [(69.58, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.59, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.59, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+a4778985-00490 [(69.58, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.59, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.59, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+a4778985-00491 [(69.58, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.59, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+a4778985-00494 [(69.58, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.59, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+a4778985-00501 [(69.59, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.6, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+a4778985-00502 [(69.59, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.6, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.6, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+a4778985-00506 [(69.6, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (69.6, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+
+## Corrida extra 3
+{'tasks': 1500, 'done': 1498, 'failed': 2, 'makespan_s': 8.7461, 'throughput_tps': 171.28, 'latency_p50_ms': 3729.5, 'latency_p95_ms': 8231.5, 'latency_p99_ms': 8641.7, 'attempts': 1536, 'retries': 28, 'requeues': 8, 'duplicates': 0, 'per_worker': {'w1': 645, 'w2': 648, 'w3': 70, 'w4': 135}}
+78.8 breaker.opened w4
+78.81 breaker.closed w4
+78.81 breaker.opened w4
+78.82 breaker.closed w4
+78.82 breaker.opened w4
+78.84 breaker.closed w4
+78.84 breaker.opened w4
+80.78 worker.down w3
+80.84 breaker.half_open w4
+80.84 breaker.opened w4
+82.85 breaker.half_open w4
+82.85 breaker.opened w4
+84.85 breaker.half_open w4
+84.85 breaker.opened w4
+85.72 worker.down w1
+05a12d72-00487 [(78.8, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.81, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.82, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+05a12d72-00488 [(78.8, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.81, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.82, 'task.failed', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+05a12d72-00490 [(78.8, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.81, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+05a12d72-00498 [(78.81, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.82, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+05a12d72-00499 [(78.81, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.82, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+05a12d72-00500 [(78.81, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.82, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+05a12d72-00504 [(78.84, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.84, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+05a12d72-00508 [(78.84, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (78.84, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]
+
+## Corrida (mostrada arriba)
+{'tasks': 1500, 'done': 1500, 'failed': 0, 'makespan_s': 8.7767, 'throughput_tps': 170.91, 'latency_p50_ms': 3764.2, 'latency_p95_ms': 8264.5, 'latency_p99_ms': 8674.7, 'attempts': 1523, 'retries': 15, 'requeues': 8, 'duplicates': 0, 'per_worker': {'w1': 648, 'w2': 650, 'w3': 66, 'w4': 136}}
+45.83 breaker.opened w4
+45.84 breaker.closed w4
+45.85 breaker.opened w4
+45.85 breaker.closed w4
+45.85 breaker.opened w4
+47.65 worker.down w3
+47.85 breaker.half_open w4
+47.85 breaker.opened w4
+49.86 breaker.half_open w4
+49.86 breaker.opened w4
+51.86 breaker.half_open w4
+51.86 breaker.opened w4
+c92244e6-00493 [(45.85, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d'), (45.85, 'task.retry', 'w4', 'InjectedFailure: fallo inyectado: nodo d')]

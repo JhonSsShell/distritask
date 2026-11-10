@@ -1,0 +1,31 @@
+# Despliegue de DistriTask en contenedores (simula la red privada de la nube).
+#   docker compose up --build --scale worker=4
+#   docker compose run --rm client logs --chunks 400
+#   Dashboard: http://localhost:8080
+services:
+  coordinator:
+    build: .
+    command: ["python", "-m", "distritask.coordinator", "--host", "0.0.0.0", "--port", "5000",
+              "--profile", "optimized"]
+    ports: ["5000:5000"]
+
+  worker:
+    build: .
+    command: ["python", "-m", "distritask.worker", "--bind", "0.0.0.0",
+              "--coordinator", "coordinator:5000", "--threads", "4"]
+    depends_on: [coordinator]
+    deploy:
+      replicas: 3
+
+  dashboard:
+    build: .
+    command: ["python", "-m", "distritask.dashboard", "--coordinator", "coordinator:5000",
+              "--http-host", "0.0.0.0", "--http-port", "8080"]
+    ports: ["8080:8080"]
+    depends_on: [coordinator]
+
+  client:
+    build: .
+    entrypoint: ["python", "-m", "distritask.client", "--coordinator", "coordinator:5000"]
+    profiles: ["tools"]
+    depends_on: [coordinator]

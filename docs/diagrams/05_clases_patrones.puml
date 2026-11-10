@@ -1,0 +1,98 @@
+@startuml
+!include _style.iuml
+title Diagrama de clases - Patrones de diseño aplicados
+hide empty members
+skinparam linetype ortho
+
+class Coordinator <<Mediator>> {
+  - pending: deque
+  - tasks: dict
+  - workers: dict
+  + submit_job(tipo, tareas)
+  - _dispatch_loop()
+  - _on_result(proxy, msg)
+  - _fail_worker(proxy, motivo)
+  - _heartbeat_loop()
+}
+
+class WorkerProxy <<Proxy remoto>> {
+  + worker_id: str
+  + capacity: int
+  + inflight: dict
+  + limit(): int
+  + available_slots(): int
+  + reserve(ids)
+  + send(lote)
+  - _reader(conn)
+}
+
+class CircuitBreaker <<Circuit Breaker>> {
+  - state: BreakerState
+  - failures: int
+  + allowed_slots(libres): int
+  + record_success()
+  + record_failure()
+}
+
+enum BreakerState {
+  CLOSED
+  OPEN
+  HALF_OPEN
+}
+
+interface LoadBalancingStrategy <<Strategy>> {
+  + select(candidatos): WorkerProxy
+}
+class RoundRobinStrategy
+class LeastLoadedStrategy
+class RandomStrategy
+
+class EventBus <<Observer: Sujeto>> {
+  + subscribe(obs, temas)
+  + unsubscribe(obs)
+  + publish(tema, datos)
+}
+interface Observer {
+  + notify(evento)
+}
+class MetricsCollector
+class LogObserver
+class RemoteSubscriber <<Proxy de observador remoto>> {
+  - queue: Queue acotada
+  - _pump()
+}
+
+class CoordinatorClient <<Proxy (cliente)>> {
+  + submit(tipo, tareas): dict
+  + stats(): dict
+}
+
+class WorkerNode {
+  - pool: ThreadPoolExecutor
+  - _serve_data(conn)
+  - _control_loop()
+  + apply_chaos(msg)
+}
+class Connection {
+  + send(msg)
+  + recv(): dict
+}
+
+Coordinator "1" o-- "*" WorkerProxy : coordina
+Coordinator --> LoadBalancingStrategy : usa
+Coordinator *-- EventBus
+WorkerProxy *-- CircuitBreaker
+CircuitBreaker --> BreakerState
+LoadBalancingStrategy <|.. RoundRobinStrategy
+LoadBalancingStrategy <|.. LeastLoadedStrategy
+LoadBalancingStrategy <|.. RandomStrategy
+EventBus o-- "*" Observer : notifica
+Observer <|.. MetricsCollector
+Observer <|.. LogObserver
+Observer <|.. RemoteSubscriber
+WorkerProxy ..> Connection
+CoordinatorClient ..> Connection
+WorkerNode ..> Connection
+WorkerProxy ..> WorkerNode : <<representa>>\n(remoto)
+CoordinatorClient ..> Coordinator : <<representa>>\n(remoto)
+@enduml

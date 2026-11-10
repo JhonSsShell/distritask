@@ -1,0 +1,70 @@
+skinparam dpi 200
+skinparam shadowing false
+skinparam defaultFontName "DejaVu Sans"
+skinparam defaultFontSize 12
+skinparam roundCorner 8
+skinparam ArrowColor #34495E
+skinparam ArrowFontSize 10
+skinparam ArrowFontColor #2C3E50
+skinparam componentStyle uml2
+skinparam component {
+  BackgroundColor #EAF2FB
+  BorderColor #1F5A96
+  FontColor #0B2545
+}
+skinparam package {
+  BackgroundColor #FFFFFF
+  BorderColor #8A9BB0
+  FontColor #1F3A5F
+  FontStyle bold
+}
+skinparam node {
+  BackgroundColor #F4F8FC
+  BorderColor #1F5A96
+  FontColor #0B2545
+}
+skinparam interface {
+  BackgroundColor #FFFFFF
+  BorderColor #1F5A96
+}
+skinparam artifact {
+  BackgroundColor #FFF8E6
+  BorderColor #B7791F
+}
+skinparam database {
+  BackgroundColor #FFF8E6
+  BorderColor #B7791F
+}
+skinparam cloud {
+  BackgroundColor #F7FAFC
+  BorderColor #8A9BB0
+}
+skinparam note {
+  BackgroundColor #FFFBEA
+  BorderColor #D4A72C
+  FontSize 10
+}
+skinparam sequence {
+  LifeLineBorderColor #8A9BB0
+  LifeLineBackgroundColor #EAF2FB
+  ParticipantBackgroundColor #EAF2FB
+  ParticipantBorderColor #1F5A96
+  ParticipantFontColor #0B2545
+  ActorBackgroundColor #EAF2FB
+  ActorBorderColor #1F5A96
+  GroupBackgroundColor #F2F5F9
+  GroupBorderColor #8A9BB0
+  BoxBackgroundColor #FBFCFE
+  BoxBorderColor #C5D0DD
+  DividerBackgroundColor #EAF2FB
+}
+skinparam class {
+  BackgroundColor #EAF2FB
+  BorderColor #1F5A96
+  ArrowColor #34495E
+  StereotypeFontColor #B7791F
+}
+skinparam state {
+  BackgroundColor #EAF2FB
+  BorderColor #1F5A96
+}

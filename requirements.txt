@@ -1,0 +1,3 @@
+# El prototipo usa SOLO la biblioteca estándar de Python (>= 3.10).
+# matplotlib solo se necesita para regenerar las gráficas de resultados.
+matplotlib>=3.7

@@ -1,0 +1,64 @@
+@startuml
+!include _style.iuml
+title Diagrama de secuencia - Procesamiento distribuido de un trabajo (versión 2)
+autonumber "<b>0."
+hide footbox
+
+actor "Analista" as User
+participant "CoordinatorClient\n<<proxy>>" as CC
+box "Coordinador" #FBFCFE
+participant "Hilo de\nconexión" as Conn
+participant "Cola de\npendientes" as Queue
+participant "Hilo\ndespachador" as Disp
+participant "LeastLoaded\n<<strategy>>" as LB
+participant "WorkerProxy w1\n(+ hilo lector)" as WP
+participant "EventBus" as Bus
+end box
+box "Nodo w1" #FBFCFE
+participant "Hilo de control\n(heartbeat)" as WCtl
+participant "Hilo del plano\nde datos" as WData
+participant "Pool de hilos\n(4 hilos)" as Pool
+end box
+participant "Dashboard\n<<observer remoto>>" as Dash
+
+== Registro (plano de control) ==
+WCtl -> Conn : REGISTER {worker_id, puerto, capacidad=4}
+Conn --> WCtl : REGISTERED
+loop cada 1 s
+  WCtl ->> Conn : HEARTBEAT {activas, completadas}
+end
+
+== Envío del trabajo ==
+User -> CC : submit("logs", 400 tareas)
+CC -> Conn : SUBMIT_JOB [TCP :5000]
+Conn -> Queue : encolar 400 TaskRecord
+Conn ->> Bus : publish(job.submitted)
+Bus ->> Dash : EVENT job.submitted
+Conn --> CC : JOB_ACCEPTED {job_id}
+
+== Despacho con control de flujo por créditos ==
+loop mientras haya tareas pendientes
+  Disp -> LB : select(nodos con créditos libres)
+  LB --> Disp : w1 (menor utilización)
+  Disp -> Queue : tomar lote (hasta 8)
+  Disp -> WP : reserve(lote)\nsend(lote)
+  WP ->> WData : EXECUTE {tasks: [t1..t8]} (conexión persistente)
+  par ejecución concurrente en el nodo
+    WData -> Pool : submit(t1)
+    Pool -> Pool : descargar chunk (E/S)\n+ analizar líneas (CPU)
+  else
+    WData -> Pool : submit(t2..t8)
+  end
+  Pool ->> WP : RESULT {t1, ok, duration_ms}
+  note right of WP : el hilo lector procesa\ncada resultado apenas llega
+  WP -> Disp : _on_result(): liberar crédito,\nmarcar DONE, notify()
+  WP ->> Bus : publish(task.completed)
+end
+
+== Cierre (reduce) ==
+Conn -> Conn : reduce_results(400 parciales)
+Conn ->> Bus : publish(job.completed, métricas)
+Bus ->> Dash : EVENT job.completed
+Conn --> CC : JOB_DONE {resultado agregado, métricas}
+CC --> User : resumen (niveles, errores, latencias)
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+!include _style.iuml
+title Diagrama de estados - Circuit Breaker de cada nodo
+hide empty description
+
+[*] --> CLOSED
+CLOSED : tráfico normal
+CLOSED : cuenta fallos consecutivos
+OPEN : no se envían tareas
+OPEN : (créditos = 0)
+HALF_OPEN : se permite 1 tarea de prueba
+
+CLOSED --> CLOSED : éxito / fallos = 0
+CLOSED --> OPEN : fallos consecutivos >= 3
+OPEN --> HALF_OPEN : pasaron 2 s (reset_timeout)
+HALF_OPEN --> CLOSED : la prueba tiene éxito
+HALF_OPEN --> OPEN : la prueba falla
+@enduml
