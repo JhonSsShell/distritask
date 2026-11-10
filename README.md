@@ -154,13 +154,3 @@ Mensajes JSON con prefijo de longitud (4 bytes, big-endian) sobre TCP:
 * Semántica de ejecución *al menos una vez*: las tareas deben ser idempotentes.
 * Un hilo por conexión en el coordinador; para miles de nodos convendría `asyncio`.
 * Sin cifrado ni autenticación (TLS y tokens quedan fuera del alcance del prototipo).
-
-## Publicar este repositorio en GitHub
-
-```bash
-git init -b main
-git add .
-git commit -m "DistriTask: prototipo de sistema distribuido (Unidad 2)"
-git remote add origin https://github.com/[TU_USUARIO]/distritask.git
-git push -u origin main
-```
